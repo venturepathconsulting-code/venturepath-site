@@ -56,6 +56,39 @@
       font-weight: 700;
       color: var(--primary);
     }
+    .brand-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-logo{
+  height:64px;
+  width:auto;
+  display:block;
+  object-fit:contain;
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.05;
+}
+
+.brand-title{
+  font-size:28px;
+  font-weight:700;
+  color:var(--primary);
+  letter-spacing:-0.5px;
+}
+
+.brand-subtitle{
+  font-size:14px;
+  font-weight:700;
+  color:var(--secondary);
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+}
     .nav-links {
       display: flex;
       gap: 18px;
@@ -147,22 +180,59 @@
       .nav-inner { justify-content: center; }
       .nav-links { justify-content: center; }
     }
+    /* Mobile Responsive */
+@media (max-width: 680px){
+
+  .nav-inner{
+    justify-content:center;
+    text-align:center;
+  }
+
+  .nav-links{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  .brand-logo{
+    height:50px;
+  }
+
+  .brand-title{
+    font-size:22px;
+  }
+
+  .brand-subtitle{
+    font-size:12px;
+    letter-spacing:1px;
+  }
+
+}
   </style>
 </head>
 <body>
   <nav class="navbar">
-    <div class="container nav-inner">
-      <div class="brand">VenturePath Consulting</div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="projects.html">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-      </div>
+  <div class="container nav-inner">
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.png" alt="VenturePath Consulting Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-title">VenturePath</span>
+          <span class="brand-subtitle">Consulting</span>
+        </div>
+      </a>
     </div>
-  </nav>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
 
   <header class="hero">
     <div class="container">
