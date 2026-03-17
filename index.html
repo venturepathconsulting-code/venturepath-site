@@ -1,591 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VenturePath Consulting</title>
-  <meta
-    name="description"
-    content="VenturePath Consulting - Research. Innovation. Intelligent Systems."
-  />
-  <style>
-    :root{
-      --primary:#0b1f3a;
-      --secondary:#163a69;
-      --accent:#2f6fed;
-      --light:#f4f7fb;
-      --white:#ffffff;
-      --text:#243041;
-      --muted:#667085;
-      --border:#e7ecf3;
-      --shadow:0 10px 30px rgba(12,31,58,0.08);
-      --radius:18px;
-      --max:1180px;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VenturePath Consulting</title>
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:var(--light);
-      color:var(--text);
-      line-height:1.6;
-    }
+<meta name="description" content="VenturePath Consulting - Research. Innovation. Intelligent Systems." />
 
-    a{text-decoration:none;color:inherit}
+<style>
 
-    .container{
-      width:100%;
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 22px;
-    }
+:root{
+--primary:#0b1f3a;
+--secondary:#163a69;
+--accent:#2f6fed;
+--light:#f4f7fb;
+--white:#ffffff;
+--text:#243041;
+--muted:#667085;
+--border:#e7ecf3;
+--shadow:0 10px 30px rgba(12,31,58,0.08);
+--radius:18px;
+--max:1180px;
+}
 
-    .navbar{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,0.96);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--border);
-    }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 
-    .nav-inner{
-      min-height:74px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-    }
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:var(--light);
+color:var(--text);
+line-height:1.6;
+}
 
-    .brand{
-      font-size:24px;
-      font-weight:700;
-      color:var(--primary);
-      letter-spacing:.2px;
-    }
+a{text-decoration:none;color:inherit}
 
-    .nav-links{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-    }
+.container{
+width:100%;
+max-width:var(--max);
+margin:0 auto;
+padding:0 22px;
+}
 
-    .nav-links a{
-      color:var(--primary);
-      font-weight:600;
-      font-size:15px;
-    }
+/* NAVBAR */
 
-    .hero{
-      background:
-        radial-gradient(circle at top right, rgba(47,111,237,0.18), transparent 30%),
-        linear-gradient(135deg, var(--primary), var(--secondary));
-      color:var(--white);
-      padding:90px 0 80px;
-    }
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,0.96);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:28px;
-      align-items:center;
-    }
+.nav-inner{
+min-height:74px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+flex-wrap:wrap;
+}
 
-    .hero h1{
-      margin:0 0 12px;
-      font-size:52px;
-      line-height:1.08;
-      letter-spacing:-1px;
-    }
+/* LOGO */
 
-    .tagline{
-      font-size:24px;
-      font-weight:700;
-      margin-bottom:14px;
-    }
+.brand a{
+display:flex;
+align-items:center;
+}
 
-    .hero p{
-      margin:0;
-      max-width:760px;
-      color:rgba(255,255,255,0.92);
-      font-size:18px;
-    }
+.brand img{
+height:55px;
+width:auto;
+}
 
-    .hero-actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:28px;
-    }
+/* NAV LINKS */
 
-    .btn{
-      display:inline-block;
-      padding:13px 22px;
-      border-radius:12px;
-      font-weight:700;
-      transition:.2s ease;
-    }
+.nav-links{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
 
-    .btn-primary{
-      background:var(--white);
-      color:var(--primary);
-    }
+.nav-links a{
+color:var(--primary);
+font-weight:600;
+font-size:15px;
+}
 
-    .btn-outline{
-      border:2px solid rgba(255,255,255,0.8);
-      color:var(--white);
-    }
+/* HERO */
 
-    .hero-card{
-      background:rgba(255,255,255,0.10);
-      border:1px solid rgba(255,255,255,0.18);
-      border-radius:20px;
-      padding:24px;
-      box-shadow:0 16px 40px rgba(0,0,0,0.16);
-    }
+.hero{
+background:
+radial-gradient(circle at top right, rgba(47,111,237,0.18), transparent 30%),
+linear-gradient(135deg, var(--primary), var(--secondary));
+color:var(--white);
+padding:90px 0 80px;
+}
 
-    .hero-card h3{
-      margin:0 0 12px;
-      font-size:22px;
-    }
+.hero-grid{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:28px;
+align-items:center;
+}
 
-    .hero-card ul{
-      margin:0;
-      padding-left:18px;
-      color:rgba(255,255,255,0.92);
-    }
+.hero h1{
+margin:0 0 12px;
+font-size:52px;
+line-height:1.08;
+letter-spacing:-1px;
+}
 
-    section{
-      padding:78px 0;
-    }
+.tagline{
+font-size:24px;
+font-weight:700;
+margin-bottom:14px;
+}
 
-    .section-head{
-      text-align:center;
-      margin-bottom:36px;
-    }
+.hero p{
+margin:0;
+max-width:760px;
+color:rgba(255,255,255,0.92);
+font-size:18px;
+}
 
-    .section-head h2{
-      margin:0 0 10px;
-      font-size:36px;
-      color:var(--primary);
-      letter-spacing:-.5px;
-    }
+.hero-actions{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:28px;
+}
 
-    .section-head p{
-      margin:0 auto;
-      max-width:820px;
-      color:var(--muted);
-      font-size:17px;
-    }
+.btn{
+display:inline-block;
+padding:13px 22px;
+border-radius:12px;
+font-weight:700;
+}
 
-    .about-box{
-      background:var(--white);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:32px;
-      max-width:950px;
-      margin:0 auto;
-      text-align:center;
-      font-size:17px;
-    }
+.btn-primary{
+background:var(--white);
+color:var(--primary);
+}
 
-    .grid{
-      display:grid;
-      gap:22px;
-    }
+.btn-outline{
+border:2px solid rgba(255,255,255,0.8);
+color:var(--white);
+}
 
-    .grid-4{grid-template-columns:repeat(4,1fr)}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-    .grid-2{grid-template-columns:repeat(2,1fr)}
+/* HERO CARD */
 
-    .card{
-      background:var(--white);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:26px;
-      height:100%;
-    }
+.hero-card{
+background:rgba(255,255,255,0.10);
+border:1px solid rgba(255,255,255,0.18);
+border-radius:20px;
+padding:24px;
+box-shadow:0 16px 40px rgba(0,0,0,0.16);
+}
 
-    .card h3{
-      margin:0 0 12px;
-      color:var(--primary);
-      font-size:22px;
-    }
+.hero-card h3{
+margin:0 0 12px;
+font-size:22px;
+}
 
-    .card p{
-      margin:0;
-      color:var(--muted);
-      font-size:15px;
-    }
+.hero-card ul{
+margin:0;
+padding-left:18px;
+color:rgba(255,255,255,0.92);
+}
 
-    .soft{
-      background:linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
-    }
+/* SECTIONS */
 
-    .research-card-top{
-      width:52px;
-      height:52px;
-      border-radius:14px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#eef4ff;
-      color:var(--accent);
-      font-weight:700;
-      margin-bottom:16px;
-      font-size:20px;
-    }
+section{
+padding:78px 0;
+}
 
-    .cta{
-      background:linear-gradient(135deg, var(--secondary), var(--primary));
-      color:var(--white);
-    }
+.section-head{
+text-align:center;
+margin-bottom:36px;
+}
 
-    .cta-panel{
-      max-width:980px;
-      margin:0 auto;
-      text-align:center;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.14);
-      border-radius:24px;
-      padding:38px 30px;
-      box-shadow:0 14px 40px rgba(0,0,0,0.16);
-    }
+.section-head h2{
+margin:0 0 10px;
+font-size:36px;
+color:var(--primary);
+}
 
-    .cta-panel h2{
-      margin:0 0 12px;
-      font-size:36px;
-    }
+.section-head p{
+margin:0 auto;
+max-width:820px;
+color:var(--muted);
+font-size:17px;
+}
 
-    .cta-panel p{
-      margin:0 auto 14px;
-      max-width:840px;
-      color:rgba(255,255,255,0.93);
-    }
+.about-box{
+background:var(--white);
+border:1px solid var(--border);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+padding:32px;
+max-width:950px;
+margin:0 auto;
+text-align:center;
+font-size:17px;
+}
 
-    .role-badges{
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      flex-wrap:wrap;
-      margin:20px 0;
-    }
+/* GRID */
 
-    .badge{
-      background:rgba(255,255,255,0.14);
-      border:1px solid rgba(255,255,255,0.18);
-      padding:10px 16px;
-      border-radius:999px;
-      font-weight:700;
-    }
+.grid{
+display:grid;
+gap:22px;
+}
 
-    .email-box{
-      display:inline-block;
-      background:var(--white);
-      color:var(--primary);
-      padding:14px 18px;
-      border-radius:12px;
-      font-weight:700;
-      margin:14px 0 6px;
-      word-break:break-word;
-    }
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
 
-    .contact-card{
-      text-align:center;
-    }
+.card{
+background:var(--white);
+border:1px solid var(--border);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+padding:26px;
+height:100%;
+}
 
-    .contact-label{
-      font-size:14px;
-      color:var(--muted);
-      margin-bottom:8px;
-      text-transform:uppercase;
-      letter-spacing:.8px;
-      font-weight:700;
-    }
+.card h3{
+margin:0 0 12px;
+color:var(--primary);
+font-size:22px;
+}
 
-    .contact-email{
-      color:var(--accent);
-      font-weight:700;
-      font-size:18px;
-      word-break:break-word;
-    }
+.card p{
+margin:0;
+color:var(--muted);
+font-size:15px;
+}
 
-    .office-wrap{
-      max-width:820px;
-      margin:0 auto;
-    }
+.soft{
+background:linear-gradient(180deg,#f8fbff 0%,#ffffff 100%);
+}
 
-    .office-card{
-      text-align:center;
-      padding:34px 28px;
-    }
+.research-card-top{
+width:52px;
+height:52px;
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#eef4ff;
+color:var(--accent);
+font-weight:700;
+margin-bottom:16px;
+font-size:20px;
+}
 
-    .office-card p{
-      font-size:18px;
-      line-height:1.7;
-    }
+/* CTA */
 
-    footer{
-      background:#0f1724;
-      color:rgba(255,255,255,0.9);
-      padding:36px 0;
-      text-align:center;
-    }
+.cta{
+background:linear-gradient(135deg,var(--secondary),var(--primary));
+color:var(--white);
+}
 
-    footer p{
-      margin:8px 0;
-    }
+.cta-panel{
+max-width:980px;
+margin:0 auto;
+text-align:center;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.14);
+border-radius:24px;
+padding:38px 30px;
+}
 
-    .small{
-      font-size:14px;
-      color:#c7d0dd;
-    }
+.badge{
+background:rgba(255,255,255,0.14);
+border:1px solid rgba(255,255,255,0.18);
+padding:10px 16px;
+border-radius:999px;
+font-weight:700;
+margin:5px;
+display:inline-block;
+}
 
-    @media (max-width: 1024px){
-      .hero-grid{grid-template-columns:1fr}
-      .grid-4{grid-template-columns:repeat(2,1fr)}
-      .grid-3{grid-template-columns:repeat(2,1fr)}
-      .hero h1{font-size:44px}
-    }
+.email-box{
+display:inline-block;
+background:var(--white);
+color:var(--primary);
+padding:14px 18px;
+border-radius:12px;
+font-weight:700;
+margin:14px 0 6px;
+}
 
-    @media (max-width: 680px){
-      .grid-4,.grid-3,.grid-2{grid-template-columns:1fr}
-      .nav-inner{justify-content:center}
-      .nav-links{justify-content:center}
-      .hero h1{font-size:36px}
-      .tagline{font-size:21px}
-      .section-head h2{font-size:30px}
-      .cta-panel h2{font-size:30px}
-    }
-  </style>
+.contact-card{
+text-align:center;
+}
+
+.contact-label{
+font-size:14px;
+color:var(--muted);
+margin-bottom:8px;
+text-transform:uppercase;
+font-weight:700;
+}
+
+.contact-email{
+color:var(--accent);
+font-weight:700;
+font-size:18px;
+}
+
+.office-wrap{
+max-width:820px;
+margin:0 auto;
+}
+
+.office-card{
+text-align:center;
+padding:34px 28px;
+}
+
+footer{
+background:#0f1724;
+color:rgba(255,255,255,0.9);
+padding:36px 0;
+text-align:center;
+}
+
+.small{
+font-size:14px;
+color:#c7d0dd;
+}
+
+/* MOBILE */
+
+@media (max-width:1024px){
+.hero-grid{grid-template-columns:1fr}
+.grid-4{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:680px){
+.grid-4,.grid-3,.grid-2{grid-template-columns:1fr}
+.nav-inner{justify-content:center}
+.nav-links{justify-content:center}
+.brand img{height:45px}
+}
+
+</style>
 </head>
+
 <body>
 
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <div class="brand">VenturePath Consulting</div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="projects.html">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </nav>
+<!-- NAVBAR -->
 
-  <header class="hero">
-    <div class="container hero-grid">
-      <div>
-        <h1>VenturePath Consulting</h1>
-        <div class="tagline">Research. Innovation. Intelligent Systems.</div>
-        <p>
-          Advancing applied research and engineering in Artificial Intelligence,
-          Cloud Platforms, Microservices Architecture, and Intelligent Automation Systems.
-        </p>
+<nav class="navbar">
+<div class="container nav-inner">
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="research.html">Explore Research</a>
-          <a class="btn btn-outline" href="careers.html">Join Our Team</a>
-        </div>
-      </div>
+<div class="brand">
+<a href="index.html">
+<img src="assets/logo.png" alt="VenturePath Consulting Logo">
+</a>
+</div>
 
-      <div class="hero-card">
-        <h3>Focus Areas</h3>
-        <ul>
-          <li>Artificial Intelligence & LLM Applications</li>
-          <li>Cloud Platforms & Distributed Systems</li>
-          <li>Microservices Architecture</li>
-          <li>Intelligent Automation & Validation</li>
-          <li>Engineering Research Programs</li>
-        </ul>
-      </div>
-    </div>
-  </header>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="projects.html">Projects</a>
+<a href="publications.html">Publications</a>
+<a href="careers.html">Careers</a>
+<a href="contact.html">Contact</a>
+</div>
 
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <h2>About VenturePath</h2>
-        <p>
-          A research and consulting initiative focused on practical innovation,
-          advanced engineering, and intelligent software systems.
-        </p>
-      </div>
+</div>
+</nav>
 
-      <div class="about-box">
-        VenturePath Consulting focuses on advanced research and engineering in
-        Artificial Intelligence, Cloud Platforms, Microservices Architecture,
-        and Intelligent Automation Systems. Our mission is to build
-        next-generation software platforms through applied research, innovation,
-        and engineering excellence.
-      </div>
-    </div>
-  </section>
+<!-- HERO -->
 
-  <section class="soft">
-    <div class="container">
-      <div class="section-head">
-        <h2>Research Areas</h2>
-        <p>
-          Our core technology areas combine modern software engineering with
-          scalable platform thinking and intelligent systems design.
-        </p>
-      </div>
+<header class="hero">
+<div class="container hero-grid">
 
-      <div class="grid grid-4">
-        <div class="card">
-          <div class="research-card-top">AI</div>
-          <h3>Artificial Intelligence</h3>
-          <p>Machine learning systems, LLM applications, and intelligent engineering platforms.</p>
-        </div>
+<div>
+<h1>VenturePath Consulting</h1>
+<div class="tagline">Research. Innovation. Intelligent Systems.</div>
 
-        <div class="card">
-          <div class="research-card-top">CL</div>
-          <h3>Cloud Platforms</h3>
-          <p>Scalable infrastructure using AWS, Azure, containers, orchestration, and Kubernetes.</p>
-        </div>
+<p>
+Advancing applied research and engineering in Artificial Intelligence,
+Cloud Platforms, Microservices Architecture, and Intelligent Automation Systems.
+</p>
 
-        <div class="card">
-          <div class="research-card-top">MS</div>
-          <h3>Microservices</h3>
-          <p>Distributed service-based architecture, observability, and event-driven systems.</p>
-        </div>
+<div class="hero-actions">
+<a class="btn btn-primary" href="research.html">Explore Research</a>
+<a class="btn btn-outline" href="careers.html">Join Our Team</a>
+</div>
+</div>
 
-        <div class="card">
-          <div class="research-card-top">IA</div>
-          <h3>Intelligent Automation</h3>
-          <p>Automation across web, mobile, API, and databases using AI-driven systems.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="hero-card">
+<h3>Focus Areas</h3>
+<ul>
+<li>Artificial Intelligence & LLM Applications</li>
+<li>Cloud Platforms & Distributed Systems</li>
+<li>Microservices Architecture</li>
+<li>Intelligent Automation & Validation</li>
+<li>Engineering Research Programs</li>
+</ul>
+</div>
 
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <h2>Current Projects</h2>
-        <p>
-          Example initiative areas aligned to our research direction and applied
-          innovation strategy.
-        </p>
-      </div>
+</div>
+</header>
 
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>AI-Driven Software Validation</h3>
-          <p>Researching intelligent systems that reduce manual QA effort and improve automation workflows.</p>
-        </div>
+<!-- ABOUT -->
 
-        <div class="card">
-          <h3>Autonomous Microservice Platforms</h3>
-          <p>Designing self-monitoring and intelligent service ecosystems for modern software environments.</p>
-        </div>
+<section>
+<div class="container">
 
-        <div class="card">
-          <h3>Cloud AI Orchestration</h3>
-          <p>Combining cloud infrastructure, intelligent scaling, and resource optimization.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="section-head">
+<h2>About VenturePath</h2>
+<p>A research and consulting initiative focused on innovation and intelligent software systems.</p>
+</div>
 
-  <section class="cta">
-    <div class="container">
-      <div class="cta-panel">
-        <h2>Join VenturePath Research Team</h2>
-        <p>
-          We are hiring researchers and consultants for AI, cloud, and software
-          engineering research and innovation programs.
-        </p>
+<div class="about-box">
+VenturePath Consulting focuses on advanced research and engineering in AI,
+Cloud Platforms, Microservices Architecture, and Intelligent Automation Systems.
+</div>
 
-        <div class="role-badges">
-          <div class="badge">3 Full-Time Research Engineers</div>
-          <div class="badge">1 Senior Research Consultant</div>
-        </div>
-        <div class="email-box">careers@venturepathconsulting.com</div>
-        <br>
-        <p>
-        Interested candidates can apply through our official application form.
-      </p>
-
-      <div style="margin-top:25px;">
-
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScm9qdgV22G1iy_HiMUgJbjnaZFrPsJ9OU6-mioB2tmdc6oog/viewform"
-          target="_blank"
-          style="background:white;color:#0b1f3a;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;font-size:16px;"
-        >
-          Submit Application Form
-        </a>
-
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="soft">
-    <div class="container">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p>
-          Reach out for general enquiries, research collaboration, or career opportunities.
-        </p>
-      </div>
-
-      <div class="grid grid-3">
-        <div class="card contact-card">
-          <div class="contact-label">General Enquiries</div>
-          <div class="contact-email">info@venturepathconsulting.com</div>
-        </div>
-
-        <div class="card contact-card">
-          <div class="contact-label">Research Collaboration</div>
-          <div class="contact-email">research@venturepathconsulting.com</div>
-        </div>
-
-        <div class="card contact-card">
-          <div class="contact-label">Careers</div>
-          <div class="contact-email">careers@venturepathconsulting.com</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container office-wrap">
-      <div class="section-head">
-        <h2>Office Location</h2>
-        <p>Our office address in Hyderabad, Telangana, India.</p>
-      </div>
-
-      <div class="card office-card">
-        <h3>VenturePath Consulting</h3>
-        <p>
-          #3-6-110, Anand Arcade<br>
-          1st Floor, Opp Tata Motors<br>
-          Himayat Nagar Main Road<br>
-          Hyderabad 500029<br>
-          Telangana, India
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p><strong>VenturePath Consulting</strong></p>
-      <p>#3-6-110, Anand Arcade, Himayat Nagar Main Road, Hyderabad 500029, Telangana, India</p>
-      <p>info@venturepathconsulting.com</p>
-      <p class="small">© 2026 VenturePath Consulting. All rights reserved.</p>
-    </div>
-  </footer>
+</div>
+</section>
 
 </body>
 </html>
