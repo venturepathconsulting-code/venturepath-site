@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +6,19 @@
   <title>Careers | VenturePath Consulting</title>
   <meta
     name="description"
-    content="Careers and research opportunities at VenturePath Consulting."
+    content="Careers and research opportunities at VenturePath Consulting in AI, cloud, microservices, and intelligent automation."
   />
+  <meta
+    name="keywords"
+    content="AI careers, research jobs, cloud engineering, microservices, software engineering, Hyderabad"
+  />
+  <meta name="author" content="VenturePath Consulting" />
+
+  <meta property="og:title" content="Careers | VenturePath Consulting" />
+  <meta property="og:description" content="Join VenturePath Consulting for research and engineering opportunities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://venturepathconsulting.com/careers.html" />
+
   <style>
     :root {
       --primary: #0b1f3a;
@@ -22,7 +32,11 @@
       --radius: 14px;
       --max-width: 1180px;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -30,20 +44,27 @@
       color: var(--text);
       line-height: 1.6;
     }
-    a { color: inherit; text-decoration: none; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     .container {
       width: 100%;
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 20px;
     }
+
     .navbar {
       background: var(--white);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
+
     .nav-inner {
       display: flex;
       align-items: center;
@@ -52,44 +73,55 @@
       gap: 20px;
       flex-wrap: wrap;
     }
+
     .brand {
       font-size: 24px;
       font-weight: 700;
       color: var(--primary);
     }
+
     .nav-links {
       display: flex;
       gap: 18px;
       flex-wrap: wrap;
     }
+
     .nav-links a {
       color: var(--primary);
       font-weight: 600;
       font-size: 15px;
     }
+
     .hero {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--white);
       padding: 80px 0 70px;
       text-align: center;
     }
+
     .hero h1 {
       margin: 0 0 10px;
       font-size: 44px;
     }
+
     .hero p {
       margin: 0 auto;
       max-width: 850px;
       font-size: 18px;
-      color: rgba(255,255,255,0.92);
+      color: rgba(255, 255, 255, 0.92);
     }
-    section { padding: 70px 0; }
+
+    section {
+      padding: 70px 0;
+    }
+
     .section-title {
       text-align: center;
       font-size: 34px;
       color: var(--primary);
       margin: 0 0 14px;
     }
+
     .section-subtitle {
       max-width: 820px;
       margin: 0 auto 36px;
@@ -97,47 +129,60 @@
       color: var(--muted);
       font-size: 17px;
     }
+
     .grid {
       display: grid;
       gap: 22px;
       grid-template-columns: repeat(2, 1fr);
     }
+
     .card {
       background: var(--white);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 28px;
     }
+
     .card h3 {
       margin-top: 0;
       color: var(--primary);
       font-size: 24px;
     }
+
     .card p {
       color: var(--muted);
     }
+
     .list {
       margin: 14px 0 0;
       padding-left: 18px;
       color: var(--muted);
     }
-    .career-banner {
+
+    .highlight {
       background: linear-gradient(135deg, #eef4ff, #ffffff);
     }
+
     .apply-panel {
       background: linear-gradient(135deg, var(--secondary), var(--primary));
       color: var(--white);
       border-radius: var(--radius);
-      box-shadow: 0 12px 30px rgba(11,31,58,0.18);
+      box-shadow: 0 12px 30px rgba(11, 31, 58, 0.18);
       padding: 34px;
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto;
       text-align: center;
     }
+
     .apply-panel h3 {
       margin-top: 0;
       font-size: 28px;
     }
+
+    .apply-panel p {
+      color: rgba(255, 255, 255, 0.94);
+    }
+
     .email-box {
       display: inline-block;
       background: var(--white);
@@ -148,32 +193,81 @@
       margin: 14px 0;
       word-break: break-word;
     }
+
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
     .btn {
       display: inline-block;
       padding: 13px 24px;
       border-radius: 10px;
       font-weight: 700;
+      text-decoration: none;
+    }
+
+    .btn-primary {
       background: var(--white);
       color: var(--primary);
-      margin-top: 8px;
     }
+
+    .btn-outline {
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      color: var(--white);
+    }
+
+    .note {
+      font-size: 14px;
+      margin-top: 16px;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .address-card {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
     footer {
       background: #101826;
-      color: rgba(255,255,255,0.88);
+      color: rgba(255, 255, 255, 0.88);
       padding: 34px 0;
       text-align: center;
     }
-    footer p { margin: 8px 0; }
+
+    footer p {
+      margin: 8px 0;
+    }
+
     .small-text {
       font-size: 14px;
       color: #c6cfdb;
     }
+
     @media (max-width: 768px) {
-      .grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 34px; }
-      .section-title { font-size: 28px; }
-      .nav-inner { justify-content: center; }
-      .nav-links { justify-content: center; }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .nav-inner {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -184,6 +278,8 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
         <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -195,41 +291,39 @@
       <h1>Careers & Research Opportunities</h1>
       <p>
         Join VenturePath Consulting to contribute to research, engineering,
-        intelligent systems, and innovation-driven technology programs.
+        intelligent systems, and innovation-led technology programs.
       </p>
     </div>
   </header>
 
-  <section class="career-banner">
+  <section class="highlight">
     <div class="container">
       <h2 class="section-title">Open Positions</h2>
       <p class="section-subtitle">
         We are currently hiring talented candidates with strong interest in AI,
-        software engineering, cloud systems, and advanced research.
+        cloud systems, microservices, software engineering, and applied research.
       </p>
 
       <div class="grid">
         <div class="card">
-          <h3>Full-Time Research Engineers</h3>
+          <h3>3 Full-Time Research Engineers</h3>
           <p>
-            We are hiring <strong>3 full-time researchers</strong> to support
-            engineering research, experimentation, prototype development, and
-            technical innovation.
+            We are hiring three full-time researchers to support engineering
+            research, experimentation, prototype development, and technical innovation.
           </p>
           <ul class="list">
             <li>Applied engineering and research work</li>
-            <li>Prototype and system development</li>
+            <li>Prototype and platform development</li>
             <li>Technical documentation and experimentation</li>
             <li>Collaboration on innovation programs</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>Senior Research Consultant</h3>
+          <h3>1 Senior Research Consultant</h3>
           <p>
-            We are hiring <strong>1 senior consultant</strong> to guide
-            technical direction, review work, and provide architectural and
-            research advisory support.
+            We are hiring one senior consultant to guide technical direction,
+            review work, and provide architectural and research advisory support.
           </p>
           <ul class="list">
             <li>Technical and research guidance</li>
@@ -246,8 +340,8 @@
     <div class="container">
       <h2 class="section-title">Preferred Skills</h2>
       <p class="section-subtitle">
-        We are looking for candidates with strong technical foundation and
-        interest in research-led engineering.
+        We are looking for candidates with strong technical foundations and a
+        research-oriented mindset.
       </p>
 
       <div class="grid">
@@ -284,17 +378,64 @@
           Send your CV, LinkedIn profile, and a short note about your research
           interests or technical background.
         </p>
+
         <div class="email-box">careers@venturepathconsulting.com</div>
+
         <p>
           Suggested subject:
           <strong>Application - VenturePath Research Program</strong>
         </p>
-        <a
-          class="btn"
-          href="mailto:careers@venturepathconsulting.com?subject=Application%20-%20VenturePath%20Research%20Program"
-        >
-          Apply Now
-        </a>
+
+        <div class="btn-row">
+          <a
+            class="btn btn-primary"
+            href="mailto:careers@venturepathconsulting.com?subject=Application%20-%20VenturePath%20Research%20Program"
+          >
+            Apply by Email
+          </a>
+
+          <a
+            class="btn btn-primary"
+            href="YOUR_GOOGLE_FORM_LINK"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Submit Application Form
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="YOUR_LINKEDIN_JOB_LINK"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on LinkedIn
+          </a>
+        </div>
+
+        <p class="note">
+          Replace the Google Form and LinkedIn links with your actual URLs before publishing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <div class="container">
+      <h2 class="section-title">Office Location</h2>
+      <p class="section-subtitle">
+        VenturePath Consulting office location in Hyderabad, Telangana, India.
+      </p>
+
+      <div class="card address-card">
+        <h3>VenturePath Consulting</h3>
+        <p>
+          #3-6-110, Anand Arcade<br />
+          1st Floor, Opp Tata Motors<br />
+          Himayat Nagar Main Road<br />
+          Hyderabad 500029<br />
+          Telangana, India
+        </p>
       </div>
     </div>
   </section>
